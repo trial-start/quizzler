@@ -1,4 +1,5 @@
 {
+  "homepage": "http://trial-start.github.io/quizzler",
   "name": "quiz_app",
   "version": "0.1.0",
   "private": true,
@@ -14,10 +15,12 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "predeploy":"npm run build",
+    "deploy":"gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "server": "json-server --watch data/questions.json --port 8000"
+    "server": "json-server --watch data/questions.json --port 8000 --host 0.0.0.0"
   },
   "eslintConfig": {
     "extends": [
@@ -41,3 +44,4 @@
     "gh-pages": "^6.0.0"
   }
 }
+{"server": "json-server --watch data/questions.json --port 8000"}
